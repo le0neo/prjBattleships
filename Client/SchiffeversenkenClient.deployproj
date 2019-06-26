@@ -1,0 +1,227 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Condition="Exists('$(BDS)\bin\CodeGear.Deployment.targets')" Project="$(BDS)\bin\CodeGear.Deployment.targets"/>
+    <ProjectExtensions>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <PropertyGroup/>
+    <ItemGroup Condition="'$(Platform)'=='iOSDevice64'"/>
+    <ItemGroup Condition="'$(Platform)'=='Win64'">
+        <DeployFile Include="$(BDS)\bin64\cc64260mt.dll" Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>cc64260mt.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\rtl260.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>rtl260.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\IndyCore260.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>IndyCore260.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\vcl260.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>vcl260.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\borlndmm.dll" Condition="'$(UsingDelphiRTL)'=='true'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>borlndmm.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\vclimg260.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>vclimg260.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\cc64260.dll" Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>cc64260.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\IndySystem260.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>IndySystem260.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include=".\Win64\Debug\SchiffeversenkenClient.exe" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>SchiffeversenkenClient.exe</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='iOSDevice32'"/>
+    <ItemGroup Condition="'$(Platform)'=='Win32'">
+        <DeployFile Include="$(BDS)\bin\cc32c260.dll" Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>cc32c260.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win32\rtl260.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>rtl260.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\cc32260.dll" Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>cc32260.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win32\vcl260.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>vcl260.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include=".\Win32\Debug\SchiffeversenkenClient.exe" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>SchiffeversenkenClient.exe</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win32\IndyCore260.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>IndyCore260.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win32\IndySystem260.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>IndySystem260.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\cc32260mt.dll" Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>cc32260mt.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\borlndmm.dll" Condition="'$(UsingDelphiRTL)'=='true'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>borlndmm.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win32\vclimg260.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>vclimg260.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\cc32c260mt.dll" Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'">
+            <RemoteDir>SchiffeversenkenClient\</RemoteDir>
+            <RemoteName>cc32c260mt.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='OSX32'">
+        <DeployFile Include="$(BDS)\Redist\osx32\libcgcrtl.dylib" Condition="'$(DynamicRTL)'=='true'">
+            <RemoteDir>SchiffeversenkenClient.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>libcgcrtl.dylib</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\osx32\libcgstl.dylib" Condition="'$(DynamicRTL)'=='true'">
+            <RemoteDir>SchiffeversenkenClient.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>libcgstl.dylib</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Android'"/>
+    <ItemGroup Condition="'$(Platform)'=='iOSSimulator'"/>
+</Project>
